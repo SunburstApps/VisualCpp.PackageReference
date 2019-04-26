@@ -20,6 +20,12 @@ namespace Sunburst.VisualCpp.PackageReference
 
         public override bool Execute()
         {
+            if (!File.Exists(StampFile.ItemSpec))
+            {
+                RestoreNeeded = true;
+                return true;
+            }
+
             Dictionary<string, string> referenceEntries = new Dictionary<string, string>();
             foreach (ITaskItem reference in PackageReferences) referenceEntries.Add(reference.ItemSpec, reference.GetMetadata("Version"));
 
