@@ -1,0 +1,5 @@
+<Project>
+  <!-- I cannot conditionalize an <Sdk /> reference. Therefore, I must move the condition here. -->
+  <Import Project="$(MSBuildThisFileDirectory)\..\tools\Sunburst.VisualCpp.PackageReference.targets"
+          Condition="'$(MSBuildProjectExtension)' == '.vcxproj'" />
+</Project>

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <CreatePackageOnBuild>true</CreatePackageOnBuild>
+    <BuildOutputTargetFolder>tools</BuildOutputTargetFolder>
+
+    <Title>Visual C++ ProjectReference Support Package</Title>
+    <Description>Adds support for PackageReference to Visual C++ projects (*.vcxproj files). You must include this project as an SDK reference for it to be effective.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>native;nativepackage;nuget;packagereference</PackageTags>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Framework" Version="16.0.*" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sdk\Sdk.props" Pack="true" PackagePath="Sdk" />
+    <Content Include="Sdk\Sdk.targets" Pack="true" PackagePath="Sdk" />
+
+    <Content Include="tools\Sunburst.VisualCpp.PackageReference.props" Pack="true" PackagePath="tools" />
+    <Content Include="tools\Sunburst.VisualCpp.PackageReference.targets" Pack="true" PackagePath="tools" />
+  </ItemGroup>
+</Project>

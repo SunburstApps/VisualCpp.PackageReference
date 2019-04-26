@@ -1,0 +1,22 @@
+<Project>
+  <UsingTask TaskName="CheckPackageRestoreNeeded" AssemblyFile="$(MSBuildThisFileDirectory)\netstandard2.0\Sunburst.VisualCpp.PackageReference.dll" />
+  <UsingTask TaskName="WritePackageRestoreStampFile" AssemblyFile="$(MSBuildThisFileDirectory)\netstandard2.0\Sunburst.VisualCpp.PackageReference.dll" />
+
+  <PropertyGroup>
+    <PackageRestoreStampFile Condition="'$(PackageRestoreStampFile)' == ''">$(MSBuildProjectDirectory)\obj\VisualCppPackageReferenceStamp.cache</PackageRestoreStampFile>
+  </PropertyGroup>
+
+  <Target Name="_CheckPackageRestoreNeeded" BeforeTargets="BeforeBuild" Condition="'@(PackageReference)' != ''">
+    <CheckPackageRestoreNeeded StampFile="$(PackageRestoreStampFile)"
+                               PackageReferences="@(PackageReference)">
+      <Output TaskParameter="RestoreNeeded" PropertyName="_PackageRestoreNeeded" />
+    </CheckPackageRestoreNeeded>
+
+    <CallTarget Targets="Restore" Condition="$(_PackageRestoreNeeded)" />
+    <Error Text="Package references restored, please retry build" Condition="$(_PackageRestoreNeeded)" />
+  </Target>
+
+  <Target Name="_WritePackageRestoreStampFile" AfterTargets="Restore" Condition="'@(PackageReference)' != ''">
+    <WritePackageRestoreStampFile StampFile="$(PackageRestoreStampFile)" PackageReferences="@(PackageReference)" />
+  </Target>
+</Project>
