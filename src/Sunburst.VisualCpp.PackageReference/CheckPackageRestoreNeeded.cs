@@ -22,7 +22,7 @@ namespace Sunburst.VisualCpp.PackageReference
         {
             if (!File.Exists(StampFile.ItemSpec))
             {
-                Log.LogMessage("Stamp file does not exist, therefore we must restore");
+                Log.LogMessage("Stamp file does not exist");
                 RestoreNeeded = true;
                 return true;
             }
