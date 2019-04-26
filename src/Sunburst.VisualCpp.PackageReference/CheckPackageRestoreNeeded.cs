@@ -22,6 +22,7 @@ namespace Sunburst.VisualCpp.PackageReference
         {
             if (!File.Exists(StampFile.ItemSpec))
             {
+                Log.LogMessage("Stamp file does not exist, therefore we must restore");
                 RestoreNeeded = true;
                 return true;
             }
@@ -44,7 +45,30 @@ namespace Sunburst.VisualCpp.PackageReference
                 stampEntries.Add(parts[0], parts[1]);
             }
 
-            RestoreNeeded = !referenceEntries.Equals(stampEntries);
+            foreach (var pair in referenceEntries)
+            {
+                if (!stampEntries.ContainsKey(pair.Key))
+                {
+                    Log.LogMessage("Reference {0} not in stamp file", pair.Key);
+                    RestoreNeeded = true;
+                }
+
+                if (stampEntries[pair.Key] != pair.Value)
+                {
+                    Log.LogMessage("Reference {0} has different version in project ({1}) than in stamp file ({2})", pair.Key, pair.Value, stampEntries[pair.Key]);
+                    RestoreNeeded = true;
+                }
+            }
+
+            foreach (var pair in stampEntries)
+            {
+                if (!referenceEntries.ContainsKey(pair.Key))
+                {
+                    Log.LogMessage("Reference {0} in stamp file but was removed from project", pair.Key);
+                    RestoreNeeded = true;
+                }
+            }
+
             return true;
         }
     }

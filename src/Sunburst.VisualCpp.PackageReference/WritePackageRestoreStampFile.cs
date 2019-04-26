@@ -21,6 +21,7 @@ namespace Sunburst.VisualCpp.PackageReference
             foreach (ITaskItem reference in PackageReferences) referenceEntries.Add(reference.ItemSpec, reference.GetMetadata("Version"));
 
             File.WriteAllLines(StampFile.ItemSpec, referenceEntries.Select(pair => $"{pair.Key}|{pair.Value}"));
+            Log.LogMessage("Saved PackageReferences in stamp file {0}", StampFile.ItemSpec);
             return true;
         }
     }
