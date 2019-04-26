@@ -4,5 +4,5 @@
     <ProjectPackageReferencesFile Condition="'$(ProjectPackageReferencesFile)' == ''">$(MSBuildProjectDirectory)\PackageReferences.props</ProjectPackageReferencesFile>
   </PropertyGroup>
 
-  <Import Project="$(ProjectPackageReferencesFile)" Condition="Exists($(ProjectPackageReferencesFile))" />
+  <Import Project="$(ProjectPackageReferencesFile)" Condition="Exists('$(ProjectPackageReferencesFile)')" />
 </Project>
