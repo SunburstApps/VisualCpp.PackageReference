@@ -6,7 +6,7 @@
     <PackageRestoreStampFile Condition="'$(PackageRestoreStampFile)' == ''">$(MSBuildProjectDirectory)\obj\VisualCppPackageReferenceStamp.cache</PackageRestoreStampFile>
   </PropertyGroup>
 
-  <Target Name="_CheckPackageRestoreNeeded" BeforeTargets="BeforeBuild" Condition="'@(PackageReference)' != ''">
+  <Target Name="_CheckPackageRestoreNeeded" BeforeTargets="_PrepareForBuild" Condition="'@(PackageReference)' != ''">
     <CheckPackageRestoreNeeded StampFile="$(PackageRestoreStampFile)"
                                PackageReferences="@(PackageReference)">
       <Output TaskParameter="RestoreNeeded" PropertyName="_PackageRestoreNeeded" />
