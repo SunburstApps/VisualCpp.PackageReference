@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="Sunburst.VisualCpp.ModernizeOutDir" Version="1.0.0" />
+  </ItemGroup>
+</Project>
