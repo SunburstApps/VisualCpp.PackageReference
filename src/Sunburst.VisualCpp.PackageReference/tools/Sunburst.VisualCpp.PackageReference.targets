@@ -3,7 +3,7 @@
   <UsingTask TaskName="WritePackageRestoreStampFile" AssemblyFile="$(MSBuildThisFileDirectory)\netstandard2.0\Sunburst.VisualCpp.PackageReference.dll" />
 
   <PropertyGroup>
-    <PackageRestoreStampFile Condition="'$(PackageRestoreStampFile)' == ''">$(MSBuildProjectDirectory)\obj\VisualCppPackageReferences.cache</PackageRestoreStampFile>
+    <PackageRestoreStampFile>$(MSBuildProjectDirectory)\obj\VisualCppPackageReferences.cache</PackageRestoreStampFile>
   </PropertyGroup>
 
   <Target Name="_CheckPackageRestoreNeeded" BeforeTargets="_PrepareForBuild" Condition="'@(PackageReference)' != ''">
