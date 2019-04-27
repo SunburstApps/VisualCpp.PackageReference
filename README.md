@@ -12,7 +12,7 @@ as an entry in a `packages.config` file) _will do nothing_.
 
 ```xml
 <Project>
-  <Sdk Name="Sunburst.VisualCpp.PackageReference" Version="1.0.0" />
+  <Sdk Name="Sunburst.VisualCpp.PackageReference" Version="1.0.1" />
 </Project>
 ```
 
