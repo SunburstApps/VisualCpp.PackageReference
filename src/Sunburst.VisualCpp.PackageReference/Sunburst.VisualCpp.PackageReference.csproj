@@ -8,7 +8,7 @@
     <Description>Adds support for PackageReference to Visual C++ projects (*.vcxproj files). You must include this project as an SDK reference for it to be effective.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>native;nativepackage;nuget;packagereference</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
