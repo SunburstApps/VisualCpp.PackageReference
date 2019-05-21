@@ -1,3 +1,3 @@
 <Project>
-  <Sdk Name="Sunburst.VisualCpp.PackageReference" Version="1.0.1" />
+  <Import Project="Sdk.props" Sdk="Sunburst.VisualCpp.PackageReference" Version="1.0.2" />
 </Project>
