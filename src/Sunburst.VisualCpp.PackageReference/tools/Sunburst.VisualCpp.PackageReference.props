@@ -5,4 +5,8 @@
   </PropertyGroup>
 
   <Import Project="$(ProjectPackageReferencesFile)" Condition="Exists('$(ProjectPackageReferencesFile)')" />
+
+  <ItemGroup>
+    <ProjectCapability Include="Sunburst.VCPackageReference" />
+  </ItemGroup>
 </Project>
