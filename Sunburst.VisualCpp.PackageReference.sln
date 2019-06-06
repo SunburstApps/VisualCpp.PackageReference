@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{18E84EC6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NativeTest", "test\NativeTest\NativeTest.vcxproj", "{C22B4905-4B73-4EF1-B1C0-36DC2956B6B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunburst.VisualCpp.PackageReference.Vsix", "src\Sunburst.VisualCpp.PackageReference.Vsix\Sunburst.VisualCpp.PackageReference.Vsix.csproj", "{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,18 @@ Global
 		{C22B4905-4B73-4EF1-B1C0-36DC2956B6B9}.Release|x64.Build.0 = Release|x64
 		{C22B4905-4B73-4EF1-B1C0-36DC2956B6B9}.Release|x86.ActiveCfg = Release|Win32
 		{C22B4905-4B73-4EF1-B1C0-36DC2956B6B9}.Release|x86.Build.0 = Release|Win32
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|x64.Build.0 = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|x64.ActiveCfg = Release|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|x64.Build.0 = Release|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCFDEA53-263C-46D7-AEB1-1AB85AC15DD0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
