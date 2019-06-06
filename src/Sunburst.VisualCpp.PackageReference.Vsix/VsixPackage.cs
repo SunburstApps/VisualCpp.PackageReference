@@ -24,6 +24,7 @@ namespace Sunburst.VisualCpp.PackageReference.Vsix
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
+    [InstalledProductRegistration("#110", "#112", "1.0")]
     [Guid(PackageGuidString)]
     public sealed class VsixPackage : AsyncPackage
     {
