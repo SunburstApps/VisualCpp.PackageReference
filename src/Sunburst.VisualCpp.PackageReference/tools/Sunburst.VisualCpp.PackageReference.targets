@@ -15,7 +15,7 @@
     <Error Text="Package references restored, please restart build" Condition="$(_PackageRestoreNeeded)" />
   </Target>
 
-  <Target Name="_WritePackageRestoreStampFile" AfterTargets="Restore">
+  <Target Name="_WritePackageRestoreStampFile" AfterTargets="Restore" Condition="'@(PackageReference)' != ''">
     <WritePackageRestoreStampFile StampFile="$(PackageRestoreStampFile)" PackageReferences="@(PackageReference)" />
   </Target>
 </Project>
